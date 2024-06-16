@@ -21,3 +21,5 @@
 
 # Ignore .vscodeignore file
 .vscodeignore
+
+*.exe
