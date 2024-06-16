@@ -1,0 +1,23 @@
+# Ignore VSCode settings
+.vscode/
+
+# Ignore VSCode workspace files
+*.code-workspace
+
+# Ignore VSCode extensions
+.vscode/extensions/
+
+# Ignore VSCode tasks
+.vscode/tasks.json
+
+# Ignore VSCode launch configurations
+.vscode/launch.json
+
+# Ignore VSCode settings sync backup
+.vscode-sync/
+
+# Ignore VSCode snippets
+.vscode/snippets/
+
+# Ignore .vscodeignore file
+.vscodeignore
