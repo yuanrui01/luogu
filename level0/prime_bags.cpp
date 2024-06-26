@@ -13,8 +13,10 @@ int main() {
         bool is_prime = true;
         int j = 2;
         for (int j = 2; j * j <= i; ++j) {
-            if (i % j == 0)
+            if (i % j == 0) {
                 is_prime = false;
+                break;
+            }
         }
         if (is_prime) {
             if (sum + i > l)
