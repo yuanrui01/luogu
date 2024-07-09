@@ -22,26 +22,22 @@ struct Bigint {
 
     void flatten(int L) {
         len = L;
-        for (int i = 1; i <= len; ++i) {
-            a[i + 1] += a[i] / 10;
-            a[i] %= 10;
-        }
+        for (int i = 1; i <= len; ++i) 
+            a[i + 1] += a[i] / 10, a[i] %= 10;
         while (!a[len])
             len--;
     }
 
     void print() {
-        for (int i = max(len, 1); i >= 1; --i) {
+        for (int i = max(len, 1); i >= 1; --i) 
             cout << a[i];
-        }
     }
 };
 Bigint operator+(Bigint a, Bigint b) {
     Bigint c;
     int len = max(a.len, b.len);
-    for (int i = 1; i <= len; ++i) {
+    for (int i = 1; i <= len; ++i) 
         c[i] += a[i] + b[i];
-    }
     c.flatten(len + 1);
     return c;
 }
@@ -49,9 +45,8 @@ Bigint operator+(Bigint a, Bigint b) {
 Bigint operator*(Bigint a, int b) {
     Bigint c;
     int len = a.len;
-    for (int i = 1; i <= len; ++i) {
+    for (int i = 1; i <= len; ++i) 
         c[i] = a[i] * b;
-    }
     c.flatten(len + 11);
     return c;
 }
